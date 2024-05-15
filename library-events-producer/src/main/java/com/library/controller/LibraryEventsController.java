@@ -1,4 +1,4 @@
-package com.library.domain.controller;
+package com.library.controller;
 
 import com.library.domain.LibraryEvent;
 import lombok.extern.slf4j.Slf4j;
