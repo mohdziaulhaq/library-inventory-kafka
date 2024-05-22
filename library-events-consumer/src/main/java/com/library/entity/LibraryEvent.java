@@ -3,10 +3,7 @@ package com.library.entity;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
@@ -21,7 +18,9 @@ public class LibraryEvent {
     @Enumerated(EnumType.STRING)
     private LibraryEventType libraryEventType;
 
-    @OneToOne(mappedBy = "libraryEvent", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "libraryEvent",
+            cascade = CascadeType.ALL)
+    @ToString.Exclude
     private Book book;
 
 }
